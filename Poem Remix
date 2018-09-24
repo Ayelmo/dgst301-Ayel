@@ -1,5 +1,7 @@
 import random 
-
+from textblob import TextBlob
+nouns= []
+adjectives = []
 AbrahamLincoln = [
     "Four score and seven years ago our fathers brought forth on this continent",
     "A new nation",
@@ -12,6 +14,14 @@ AbrahamLincoln = [
     "The world will little note",
     "That this nation, under God"
 ]
+for line in AbrahamLincoln:
+    blob= TextBlob (line)
+    for word,pos in blob.tags:
+        print(word,pos)
+        if (pos == 'JJ'):
+            adjectives.append(word)
+        if (pos == 'NN'):
+            nouns.append(word)
 MartinLutherKing = [
     "But one hundred years later, the Negro still is not free",
     "The Negro lives on a lonely island",
@@ -24,7 +34,14 @@ MartinLutherKing = [
     "Let us not wallow in the valley of despair",
     "I have a dream that one day down in Alabama" 
 ]
-
+for line in MartinLutherKing:
+    blob= TextBlob (line)
+    for word,pos in blob.tags:
+        print(word,pos)
+        if (pos == 'JJ'):
+            adjectives.append(word)
+        if (pos == 'NN'):
+            nouns.append(word)
 JFKspeech = [
     "will stop and examine his conscience",
     "It was founded on the principle that all men are created equal",
@@ -37,4 +54,13 @@ JFKspeech = [
     "I think we owe them and we owe ourselves a better country than that",
     "they have a right to expect that the law will be fair"
 ]
+for line in JFKspeech:
+    blob= TextBlob (line)
+    for word,pos in blob.tags:
+        print(word,pos)
+        if (pos == 'JJ'):
+            adjectives.append(word)
+        if (pos == 'NN'):
+            nouns.append(word)
+    
    
