@@ -1,0 +1,40 @@
+import random 
+
+AbrahamLincoln = [
+    "Four score and seven years ago our fathers brought forth on this continent",
+    "A new nation",
+    "Conceived in Liberty",
+    "Dedicated to the proposition that all men are created equal",
+    "Now we are engaged in a great civil war",
+    "We can not hallow",
+    "The brave men, living and dead",
+    "Shall not perish from the earth",
+    "The world will little note",
+    "That this nation, under God"
+]
+MartinLutherKing = [
+    "But one hundred years later, the Negro still is not free",
+    "The Negro lives on a lonely island",
+    "We’ve come to our nation’s capital to cash a check",
+    "Guaranteed the unalienable rights of life, liberty, and the pursuit of happiness",
+    "Now is the time to make real the promises of democracy",
+    "We cannot turn back",
+    "We can never be satisfied",
+    "No! no, we are not satisfied",
+    "Let us not wallow in the valley of despair",
+    "I have a dream that one day down in Alabama" 
+]
+
+JFKspeech = [
+    "will stop and examine his conscience",
+    "It was founded on the principle that all men are created equal",
+    "the rights of all who wish to be free",
+    "every American to enjoy the privileges of being American",
+    "But this is not the case",
+    "This is not even a legal or legislative issue alone",
+    "he cannot enjoy the full and free life which all of us want",
+    "he cannot enjoy the full and free life which all of us want",
+    "I think we owe them and we owe ourselves a better country than that",
+    "they have a right to expect that the law will be fair"
+]
+   
