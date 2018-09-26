@@ -63,4 +63,13 @@ for line in JFKspeech:
         if (pos == 'NN'):
             nouns.append(word)
     
-   
+   for a in range(2):
+    print(random.choice(AbrahamLincoln))
+    
+    print(random.choice(MartinLutherKing))
+    print(random.choice(JFKspeech))
+ 
+    n1 = random.choice(nouns)
+    n2 = random.choice(nouns)
+    print(n1 + " " + a1)
+    print(a2 + " " + n2)
