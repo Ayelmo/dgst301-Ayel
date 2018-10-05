@@ -1,0 +1,31 @@
+from textblob import TextBlob
+import random 
+import pycorpora
+import pronouncing 
+
+
+template = """
+    One {0}, Two {0}, {1} {0}, {2} {0}. 
+    {3} {0}, {2} {0}, Old {0}, New {0}. 
+    This one has a little {4}. This one has a little {5}. 
+    Say! What a lot Of {0}'s there are.  
+        .
+    
+"""
+
+animal = random.choice(pycorpora.animals.common["animals"])
+color = random.choice(pycorpora.colors.crayola["colors"])
+color = random.choice(pycorpora.colors.crayola["colors"])
+color = random.choice(pycorpora.colors.crayola["colors"])
+hand_rhyme = random.choice(pronouncing.rhymes("hand"))
+demand_rhyme = random.choice(pronouncing.rhymes("demand"))
+pronunciation_list = pronouncing.phones_for_word("hand")
+syllable_count = pronouncing.syllable_count(pronunciation_list[0]) 
+if (syllable_count is 2):
+    keepers.append(hand)(demand)
+
+
+arranged = template.format (get_animal(),get_colors(),get_colors(),get_colors(),(hand_rhyme),(demand_rhyme))
+
+      
+print(arranged)
