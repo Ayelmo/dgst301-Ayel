@@ -1,0 +1,96 @@
+
+import dominate
+from dominate.tags import*
+import random 
+import markovify
+import pdfkit
+
+
+
+
+
+
+      
+
+novel = ''
+Chapter_index= 1
+
+
+
+with open('NaNoGenMo_AyelMo.txt', encoding='utf-8') as f:
+    for line in f:
+        text = f.read()
+#         print(repr(line))
+text_model = markovify.Text(text)
+
+
+
+for i in range(3500):
+    novel += str(text_model.make_sentence()) + " "
+    r = random.randint(0,50)
+    if (r< 6):
+        novel += "\n\n"
+    elif(r> 50):
+            novel += ". "
+    
+# html_entity_decode(string, ENT_QUOTES | ENT_XML1, 'UTF-8')
+
+
+            
+
+chapter_heading= 1
+
+chapter_heading = [
+    "Bartholomew & the Oobleck",
+    "And to Think That I Saw It on Mulberry",
+    "CAT AND THE HAT",
+    "Fox in Socks",
+    "Green Eggs and Ham",
+    "Horton Hears a Who",
+    "How the Grinch Stole Christmas",
+    "The Lorax",
+    "Oh, the Places You'll Go!",
+    "One Fish, Two Fish, Red Fish, Blue Fish",
+    "There's a Wocket in My Pocket",
+    "Sneetches And Other Stories",
+    "Yertle the Turtle & Other Stories",
+    
+    
+]
+
+
+output =""
+
+def chapter_heading(i):
+  base = "CHAPTER #{i.to_words.upcase}"
+  underline = "-" * base.length
+
+
+
+
+    
+if (r> 0.85):
+    
+    sectioned = novel.split("\n\n")
+doc=dominate.document(title = 'Dr.Suess')
+with doc.head:
+    style("body {background-color: #ddd; color: black; font-size: 15pt}")
+
+with doc: 
+    h1 ('Dr.Suess Oh What A Remix')
+    h1 ('DGST-Creative Coding')
+    h1 ('By: Ayel Morrissey')
+    for s in sectioned:
+        p(s)
+
+# to PDF NaNoGnMo_AyelMo.ipynb
+
+# # pdfkit.from_string(str(doc.render()), 'Dr.Suess.pdf')
+# pdfkit.from_string(str(doc.render()), 'Dr.Suess.pdf')
+
+# print (doc)
+f = open("NewDr_Suess.html", "w",encoding='utf-8')
+f.write(doc.render())
+    
+sectioned = novel.split("\n\n")
+      
