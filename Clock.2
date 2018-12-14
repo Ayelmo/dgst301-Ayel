@@ -1,0 +1,208 @@
+function setup() { 
+ 
+
+
+  createCanvas(720, 400);
+} 
+
+function draw() { 
+  background(70,170,120,125);
+  
+  stroke(255)
+  //Hour 1
+  
+  let myhr= hour();
+  
+  if (myhr > 12) {
+    myhr=myhr-12
+  }
+   fill(244,122,158);
+  rect( 70 , 50, 40, 40);
+  
+  
+  //Hour 2
+  if (myhr > 12) {
+    myhr=myhr-11
+  }
+     fill(100,150,95);
+ rect( 150, 50, 40, 40);
+  
+  
+  //Hour 3
+  if (myhr > 12) {
+    myhr=myhr-10
+  }
+    fill(244,122,158);
+  rect( 70 , 110, 40, 40);
+  
+  
+  //Hour 4
+  if (myhr > 12) {
+    myhr=myhr-9
+  }
+    fill(100,150,95);
+   rect( 150, 110, 40, 40);
+  
+  //Hour 5
+  if (myhr > 12) {
+    myhr=myhr-8
+  }
+    fill(244,122,158);
+  rect( 70 , 170, 40, 40);
+  
+  
+  //Hour 6
+  if (myhr > 12) {
+    myhr=myhr-7
+  }
+     fill(100,150,95);
+   rect( 150, 170, 40, 40);
+  
+  
+  //Hour 7
+  if (myhr > 12){
+  	myhr=myhr-6
+  }
+    fill(244,122,158);
+  rect( 70 , 230, 40, 40);
+  
+  
+  //Hour 8
+  if (myhr > 12){
+    myhr=myhr-5
+  }
+    fill(100,150,95);
+   rect( 150, 230, 40, 40);
+  
+  
+  //Hour 9
+  if (myhr > 12) {
+    myhr=myhr-4
+  }
+    fill(244,122,158);
+  rect( 70 , 290, 40, 40);
+  
+  
+  //Hour 10
+  if (myhr > 12) {
+    myhr=myhr-3
+  }
+    fill(100,150,95);
+   rect( 150, 290, 40, 40);
+  
+  //Hour 11
+  if (myhr > 12) {
+    myhr=myhr-2
+  }
+    fill(244,122,158);
+  rect( 70 , 350, 40, 40);
+  
+  
+  //Hour 12
+  if (myhr > 12){
+    myhr=myhr-1
+  }
+     fill(100,150,95);
+    rect( 150, 350, 40, 40);
+  
+
+    
+  //middle two dots 
+  fill(20,20,20)
+  ellipse(250,170,50,50)
+  //12
+  //second 
+  fill(20,20,20)
+  ellipse(250,270,50,50)
+ 
+  //Min One
+  if (minute() >=10) {
+  fill(120,120,150)
+triangle(290, 130, 340, 130, 310, 80);  
+  }
+  //Second 
+  if (minute() >=20){
+  noFill(120,120,150)
+triangle(290, 180, 340, 180, 310, 130);
+  }
+   //Third 
+    if (minute() >=30) {
+        fill(120,120,150)
+triangle(290, 230, 340, 230, 310, 180);
+    }
+  if (minute() >=40){
+     noFill(120,120,150)
+triangle(290, 280, 340, 280, 310, 230);
+  }
+    if (minute()>=50){
+       fill(120,120,150)
+triangle(290, 330, 340, 330, 310, 280);
+      
+    }
+    
+    //Rectagle 1 
+     
+ // { var x = 0;
+ // var offset = minute (1)
+  //  x += 40
+// fill(150,150,300);
+
+ Min = minute().toString();
+  
+  //fill(150,150,300);
+ 
+strokeWeight(random(12,10));
+stroke(random(150,70),random(50,70),random(255,70));
+
+  
+  //   var rectangleX = random(width);
+  // var rectangleY = random(height);
+  //  var rectangleSize = random(20,20)
+   //rect(100,rectangleX, rectangleY, rectangleSize)
+  
+  
+   
+   
+  if (Min.length <10) {
+ Min = Number(Min[1]);
+ }
+  if (Min >= 1) {
+    
+rect(360, 50, 50, 30)
+   
+  }
+   	//make first rectangle 
+ if (Min >= 2){
+    
+rect(360, 90, 50, 30);
+  }
+   if (Min >= 3) {
+
+rect(360, 130, 50, 30);
+   }
+     if (Min >= 4) {
+
+rect(360, 170, 50, 30);
+     }
+   if (Min >= 5){
+     
+rect(360, 210, 50, 30);
+}
+  if (Min >= 6){
+
+rect(360, 250, 50, 30);
+  }
+  if (Min >= 7){
+  
+rect(360, 290, 50, 30);
+  }
+  if (Min >= 8) {
+      
+rect(360, 330, 50, 30);
+  }
+  if (Min >= 9) {
+     
+    rect(360, 370, 50, 30);
+  }
+  
+}
